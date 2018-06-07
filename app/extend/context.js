@@ -3,7 +3,6 @@
 const SYMBOL_CONNECTOR = Symbol('connector');
 
 module.exports = {
-
   /**
    * connector instance
    * @member Context#connector
