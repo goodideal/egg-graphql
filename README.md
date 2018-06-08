@@ -1,4 +1,5 @@
 # egg-graphql
+
 ---
 
 [GraphQL](http://facebook.github.io/graphql/)使用 Schema 来描述数据，并通过制定和实现 GraphQL 规范定义了支持 Schema 查询的 DSQL （Domain Specific Query Language，领域特定查询语言，由 FACEBOOK 提出。
@@ -62,15 +63,15 @@ exports.graphql = {
   // 是否加载开发者工具 graphiql, 默认开启。路由同 router 字段。使用浏览器打开该可见。
   graphiql: true,
   // graphQL 路由前的拦截器
-  onPreGraphQL: function* (ctx) {},
+  onPreGraphQL: function*(ctx) {},
   // 开发工具 graphiQL 路由前的拦截器，建议用于做权限操作(如只提供开发者使用)
-  onPreGraphiQL: function* (ctx) {},
+  onPreGraphiQL: function*(ctx) {},
 };
 ```
 
 ## 使用方式
 
-请将 graphql 相关逻辑放到 app/graphql 下，请参考测试用例，里面有connector/schema 的目录结构, 以及 dataloader 的使用。
+请将 graphql 相关逻辑放到 app/graphql 下，请参考测试用例，里面有 connector/schema 的目录结构, 以及 dataloader 的使用。
 
 目录结构如下
 
@@ -85,21 +86,28 @@ exports.graphql = {
 │   │   └── user  // 一个graphql模型
 │   │       ├── connector.js  
 │   │       ├── resolver.js
-│   │       └── schema.graphql 
+│   │       └── schema.graphql
 │   ├── model
 │   │   └── user.js
 │   ├── public
 │   └── router.js
+```
 
+## ts 的支持
+
+在项目根目录创建 tshelper.js,并赋值如下代码:
+
+```
+module.exports = require("egg-graphql/tshelper");
 ```
 
 ## 参考文章
 
-- [graphql官网](http://facebook.github.io/graphql)
+- [graphql 官网](http://facebook.github.io/graphql)
 
-- [如何在egg中使用graphql](https://zhuanlan.zhihu.com/p/30604868)
+- [如何在 egg 中使用 graphql](https://zhuanlan.zhihu.com/p/30604868)
 
-- [项目例子：结合sequelize](https://github.com/freebyron/egg-graphql-boilerplate)
+- [项目例子：结合 sequelize](https://github.com/freebyron/egg-graphql-boilerplate)
 
 ## 协议
 
