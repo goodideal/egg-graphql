@@ -10,7 +10,7 @@ module.exports = {
       pattern: '**/connector*.(ts|js)',
       generator,
       caseStyle: 'lower',
-      trigger: ['add', 'change', 'unlink'],
+      trigger: [ 'add', 'change', 'unlink' ],
       enabled: true,
     },
   },
