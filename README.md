@@ -101,6 +101,8 @@ exports.graphql = {
 module.exports = require("egg-graphql/tshelper");
 ```
 
+## 增加了 schemaDireactives 的支持
+
 ## 参考文章
 
 - [graphql 官网](http://facebook.github.io/graphql)
