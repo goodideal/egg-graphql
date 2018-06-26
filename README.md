@@ -95,12 +95,6 @@ exports.graphql = {
 
 ## ts 的支持
 
-在项目根目录创建 tshelper.js,并赋值如下代码:
-
-```
-module.exports = require("egg-graphql/tshelper");
-```
-
 ## 增加了 schemaDireactives 的支持
 
 ## 参考文章
